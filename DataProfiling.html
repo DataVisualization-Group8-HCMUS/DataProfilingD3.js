@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Visualization Retails Sale Dataset</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="d3_js.png">
+    <link rel="csv" type="text/csv" href="retail_sales_dataset.csv">
+    <style>
+        .line-chart {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 2px;
+        }
+        .line-chart-quantity {
+            fill: none;
+            stroke: crimson;
+            stroke-width: 2px;
+        }
+        .tooltip {
+            position: absolute;
+            opacity: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 4px;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+    </style>
+</head>
+<body style="background-color: #f0f8ff;"></body>
+    <div id="tooltip" class="tooltip"></div>
+    <h1 style="text-align: center; font-family:Arial, Helvetica, sans-serif">Data profiling dữ liệu bán lẻ</h1>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+        <svg width="800" height="400" id="null-chart"></svg>
+        <svg width="800" height="400" id="missing-chart"></svg>
+        <svg width="800" height="400" id="actual-chart"></svg>
+        <svg width="800" height="400" id="completeness-chart"></svg>
+        <svg width="800" height="400" id="cardinality-chart"></svg>
+        <svg width="800" height="400" id="uniqueness-chart"></svg>
+        <svg width="800" height="400" id="distinctness-chart"></svg>
+        <svg width="800" height="400" id="top-5-transaction-id"></svg>
+        <svg width="800" height="400" id="top-5-customer-id"></svg>
+        <svg width="800" height="400" id="top-5-dates"></svg>
+        <svg width="800" height="400" id="top-5-gender"></svg>
+        <svg width="800" height="400" id="top-5-age"></svg>
+        <svg width="800" height="400" id="top-5-product-category"></svg>
+        <svg width="800" height="400" id="top-5-quantity"></svg>
+        <svg width="800" height="400" id="top-5-price"></svg>
+        <svg width="800" height="400" id="top-5-total-amount"></svg>
+    </div>
+    
+    <script src="./data-visualization.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Sales Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="d3_js.png">
+    <link rel="csv" type="text/csv" href="retail_sales_dataset.csv">
+    <style>
+        .line-chart {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 2px;
+        }
+        .line-chart-quantity {
+            fill: none;
+            stroke: crimson;
+            stroke-width: 2px;
+        }
+        .tooltip {
+            position: absolute;
+            opacity: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 4px;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+    </style>
+</head>
+<body style="background-color: #f0f8ff;"></body>
+    <div id="tooltip" class="tooltip"></div>
+    <h1 style="text-align: center; font-family:Arial, Helvetica, sans-serif">Trình bày dữ liệu bán lẻ</h1>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+        <svg width="800" height="400" id="date-chart"></svg>
+        <svg width="800" height="400" id="date-chart-quantity"></svg>
+        <svg width="800" height="440" id="gender-chart"></svg>
+        <svg width="800" height="440" id="age-chart-amount"></svg>
+        <svg width="800" height="440" id="age-chart-quantity"></svg>
+        <svg width="800" height="440" id="age-chart-price"></svg>
+        <svg width="800" height="440" id="product-chart-amount"></svg>
+        <svg width="800" height="440" id="product-chart-quantity"></svg>
+        <svg width="800" height="440" id="product-chart-price"></svg>
+    </div>
+    
+    <script src="./chart.js"></script>
+</body>
+</html>
